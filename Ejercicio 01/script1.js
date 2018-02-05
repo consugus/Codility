@@ -4,18 +4,18 @@ var retorno = (function (){
     var equilibrio;
     var vectorDeResultados = [];
 
-    for (var i = 1; i < arreglo.length; i++){            
+    for (var i = 1; i < arreglo.length; i++){
 
         function sumarAnteriores(i){
             var ant = 0;
                 if(i != 0) {
                     for (var j = 0; j < i; j++){
-                    ant += arreglo[j];                    
+                    ant += arreglo[j]
                 }
-            }                
+            }
             return ant;
             };
-        var anteriores  = sumarAnteriores(i);                
+        var anteriores  = sumarAnteriores(i);
 
         function sumarPosteriores(i){
                 var post = 0;
@@ -23,7 +23,7 @@ var retorno = (function (){
                     for (var k = i+1; k < arreglo.length; k++){
                     post += arreglo[k];
                 }
-            }                
+            }
             return post;
             };
         var posteriores = sumarPosteriores(i);
@@ -31,11 +31,11 @@ var retorno = (function (){
         if(anteriores == posteriores){
             // if (vectorDeResultados.length == 0){
             //     vectorDeResultados.push(-1);
-            // }            
+            // }
             vectorDeResultados.push(i);
-        }               
+        }
     };
-    return vectorDeResultados;    
+    return vectorDeResultados;
 })();
 
 
